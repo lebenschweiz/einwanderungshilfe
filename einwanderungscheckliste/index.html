@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Einwanderungs-Checkliste Schweiz | LebenPlus</title>
+  <meta name="description" content="Kostenlose Checkliste für den Umzug in die Schweiz: alle Fristen von Anmeldung bis Krankenkasse automatisch berechnet, mit offiziellen Quellen. Für EU/EFTA-Bürger." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_CH" />
+  <meta property="og:site_name" content="LebenPlus" />
+  <meta property="og:title" content="Einwanderungs-Checkliste Schweiz" />
+  <meta property="og:description" content="Alle Schritte und Fristen für den Umzug in die Schweiz, geprüft an offiziellen Quellen." />
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/img/favicon-180.png" />
+  <link rel="stylesheet" href="assets/checklist.css" />
+  <link rel="stylesheet" href="assets/light.css" />
+</head>
+<body>
+  <a class="skip" href="#cl-list">Zur Checkliste springen</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">+</span><span>Leben<b>Plus</b></span></a>
+      <div class="progress" aria-label="Fortschritt">
+        <div class="progress-track"><span data-progress-fill></span></div>
+        <span class="progress-pct" data-progress-text>0 %</span>
+      </div>
+      <a class="topbar-link" href="premium.html">Dunkle Version</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Für EU/EFTA-Bürger · Stand <span data-stand></span></p>
+        <h1>Umzug in die Schweiz.<br /><span>Jede Frist im Blick.</span></h1>
+        <p class="lead">Von der Wohnungsbewerbung bis zur Krankenkasse: Gib dein Einreisedatum ein und du siehst sofort, was wann fällig ist. Jede Angabe ist mit der offiziellen Quelle verlinkt.</p>
+
+        <div class="hero-grid">
+          <div class="card setup">
+            <h2 class="card-title">1. Deine Eckdaten</h2>
+            <div id="cl-setup"></div>
+          </div>
+          <div class="card next">
+            <h2 class="card-title">2. Als Nächstes fällig</h2>
+            <div id="cl-next"></div>
+            <p class="progress-detail" data-progress-detail></p>
+          </div>
+        </div>
+
+        <ul class="facts-strip" aria-label="Die wichtigsten Fristen">
+          <li><strong>14 Tage</strong><span>Anmeldung Gemeinde</span></li>
+          <li><strong>3 Monate</strong><span>Krankenkasse</span></li>
+          <li><strong>12 Monate</strong><span>Führerausweis umtauschen</span></li>
+          <li><strong>31.12.</strong><span>Säule 3a einzahlen</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="navbar">
+      <div class="wrap navbar-inner">
+        <nav id="cl-nav" class="chips" aria-label="Phasen"></nav>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="tools">
+        <button type="button" class="tool" data-action="only-open" aria-pressed="false">Nur offene</button>
+        <button type="button" class="tool" data-action="expand">Alle aufklappen</button>
+        <button type="button" class="tool" data-action="ics" title="Fristen als Kalenderdatei (.ics)">Kalender</button>
+        <button type="button" class="tool" data-action="print">Drucken / PDF</button>
+      </div>
+      <div id="cl-list" class="list"></div>
+
+      <section class="cta card">
+        <div>
+          <h2>Allein ist der Umzug viel Arbeit.</h2>
+          <p>Bei LebenPlus begleiten wir Menschen auf dem Weg in die Schweiz: Job, Wohnung, Anmeldung, Krankenkasse.</p>
+        </div>
+        <a class="btn" href="https://lebenschweiz.github.io/in30Tagen_schweiz/#bewerben">Begleitung ansehen →</a>
+      </section>
+
+      <p class="reset-row"><button type="button" class="linkbtn" data-action="reset">Fortschritt zurücksetzen</button></p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p><strong>Hinweis:</strong> Diese Checkliste ersetzt keine Rechtsberatung. Gesetze, Gebühren und Beträge können sich ändern, und manches regeln Kantone und Gemeinden unterschiedlich. Verbindlich sind die verlinkten Seiten von Bund, Kantonen und Gemeinden. Stand der Angaben: <span data-stand></span>.</p>
+      <p>Dein Fortschritt wird nur in deinem Browser gespeichert und nicht an uns übertragen.</p>
+      <p class="copy">© 2026 LebenPlus</p>
+    </div>
+  </footer>
+
+  <dialog id="cl-reset-confirm" class="dialog">
+    <form method="dialog">
+      <h3>Alles zurücksetzen?</h3>
+      <p>Einreisedatum, Profil und alle Häkchen werden gelöscht.</p>
+      <div class="dialog-actions">
+        <button value="no" class="btn btn-ghost">Abbrechen</button>
+        <button value="yes" class="btn btn-danger">Zurücksetzen</button>
+      </div>
+    </form>
+  </dialog>
+  <div id="cl-toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

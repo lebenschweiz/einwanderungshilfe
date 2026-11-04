@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Einwanderungs-Checkliste Schweiz | Lebenplus</title>
+  <meta name="description" content="Alle Schritte und Fristen für den Umzug in die Schweiz, automatisch berechnet und geprüft an offiziellen Quellen. Kostenlos, für EU/EFTA-Bürger." />
+  <meta name="theme-color" content="#0B0B0D" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_CH" />
+  <meta property="og:site_name" content="Lebenplus" />
+  <meta property="og:title" content="Umzug in die Schweiz. Ohne eine Frist zu verpassen." />
+  <meta property="og:description" content="Anmeldung, Krankenkasse, Zoll, Führerausweis: alle Fristen ab deinem Einreisedatum, mit offiziellen Quellen." />
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/img/favicon-180.png" />
+  <link rel="stylesheet" href="assets/checklist.css" />
+  <link rel="stylesheet" href="assets/premium.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <a class="skip" href="#cl-list">Zur Checkliste springen</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="./premium.html" aria-label="Lebenplus Einwanderungs-Checkliste">
+        <img src="assets/img/wordmark.png" alt="Lebenplus" />
+      </a>
+      <div class="hdr-progress" aria-label="Fortschritt">
+        <div class="hdr-track"><span data-progress-fill></span></div>
+        <span data-progress-text>0 %</span>
+      </div>
+      <a class="btn btn-primary btn-sm" href="https://lebenschweiz.github.io/in30Tagen_schweiz/#bewerben">Begleitung <span class="arrow">→</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div>
+          <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Einwanderungs-Checkliste · Stand <span data-stand></span></span>
+          <h1>
+            <span class="line"><span>Umzug in die Schweiz.</span></span>
+            <span class="line"><span class="accent">Ohne eine Frist zu verpassen.</span></span>
+          </h1>
+          <p class="hero-lead">
+            Gib dein Einreisedatum ein. Wir rechnen jede Frist aus, <strong>von der Wohnungsbewerbung bis zur Säule 3a.</strong>
+            Jede Angabe ist mit der offiziellen Quelle von Bund oder Kanton verlinkt.
+          </p>
+          <div class="hero-meta">
+            <span>Kostenlos</span><span>Offizielle Quellen</span><span>Speichert nur in deinem Browser</span>
+          </div>
+        </div>
+
+        <div class="journey-card">
+          <div class="journey-head">
+            <span class="journey-label">Dein Start</span>
+            <span class="journey-pct"><span data-progress-text>0 %</span><small>erledigt</small></span>
+          </div>
+          <div class="journey-bar" aria-hidden="true"><span data-progress-fill></span></div>
+          <div id="cl-setup"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Laufband ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">Anmeldung in 14 Tagen</span><span class="marquee-item">Krankenkasse in 3 Monaten</span><span class="marquee-item">Formular 18.44</span><span class="marquee-item">Führerausweis in 12 Monaten</span><span class="marquee-item">Säule 3a bis 31.12.</span>
+        <span class="marquee-item">Anmeldung in 14 Tagen</span><span class="marquee-item">Krankenkasse in 3 Monaten</span><span class="marquee-item">Formular 18.44</span><span class="marquee-item">Führerausweis in 12 Monaten</span><span class="marquee-item">Säule 3a bis 31.12.</span>
+      </div>
+    </div>
+
+    <!-- ===== Als Nächstes ===== -->
+    <section class="section section-tight" id="naechstes">
+      <div class="container next-wrap">
+        <div class="section-head">
+          <span class="section-kicker">Als Nächstes</span>
+          <h2>Das steht jetzt an.</h2>
+          <p class="section-lead">Die nächsten offenen Fristen, sortiert nach Datum. Überfälliges ist rot markiert.</p>
+          <p class="progress-detail" data-progress-detail></p>
+        </div>
+        <div class="card next-card" id="cl-next"></div>
+      </div>
+    </section>
+
+    <!-- ===== Checkliste ===== -->
+    <div class="navbar">
+      <div class="container navbar-inner">
+        <nav id="cl-nav" class="chips" aria-label="Phasen"></nav>
+      </div>
+    </div>
+
+    <section class="section section-list">
+      <div class="container">
+        <div class="list-head">
+          <div>
+            <span class="section-kicker">Die Checkliste</span>
+            <h2>Fünf Phasen. Jeder Schritt mit Quelle.</h2>
+          </div>
+          <div class="tools">
+            <button type="button" class="tool" data-action="only-open" aria-pressed="false">Nur offene</button>
+            <button type="button" class="tool" data-action="expand">Alle aufklappen</button>
+            <button type="button" class="tool" data-action="ics" title="Fristen als Kalenderdatei (.ics)">In Kalender</button>
+            <button type="button" class="tool" data-action="print">Drucken / PDF</button>
+          </div>
+        </div>
+        <div id="cl-list" class="list"></div>
+
+        <p class="note">
+          <strong>Nicht die Bewilligung ist der Engpass.</strong> Als EU/EFTA-Bürger ist die Bewilligung mit Arbeitsvertrag Formsache. Schwierig sind Job und Wohnung. Genau dabei begleiten wir dich.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Abschluss ===== -->
+    <section class="section final-cta">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container">
+        <h2>In 90 Tagen in die Schweiz.</h2>
+        <p class="section-lead">Job-Zusage, Wohnung, Anmeldung und Krankenkasse – mit persönlicher Begleitung durch Eugen und Johannes.</p>
+        <a class="btn btn-primary btn-lg" href="https://lebenschweiz.github.io/in30Tagen_schweiz/#bewerben">Aufnahme-Check beantragen <span class="arrow">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Hinweis:</strong> Diese Checkliste ersetzt keine Rechtsberatung. Gesetze, Gebühren und Beträge können sich ändern, vieles regeln Kantone und Gemeinden unterschiedlich. Verbindlich sind die verlinkten offiziellen Seiten. Stand: <span data-stand></span>. Dein Fortschritt bleibt nur in deinem Browser.</p>
+      <div class="footer-row">
+        <span>© 2026 Lebenplus · Auswandern &amp; Leben in der Schweiz</span>
+        <nav>
+          <a href="./">Helle Version</a>
+          <button type="button" class="linkbtn" data-action="reset">Fortschritt zurücksetzen</button>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="cl-reset-confirm" class="dialog">
+    <form method="dialog">
+      <h3>Alles zurücksetzen?</h3>
+      <p>Einreisedatum, Profil und alle Häkchen werden gelöscht.</p>
+      <div class="dialog-actions">
+        <button value="no" class="btn btn-ghost">Abbrechen</button>
+        <button value="yes" class="btn btn-primary">Zurücksetzen</button>
+      </div>
+    </form>
+  </dialog>
+  <div id="cl-toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
